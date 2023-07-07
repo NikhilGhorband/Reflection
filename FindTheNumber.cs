@@ -13,34 +13,34 @@ namespace ReflectionProblem2
         {
             Type type = typeof(FindTheNumber);
 
-            
+
             Console.WriteLine("FullClass Name is: " + type.FullName);
-           
+
 
             Console.WriteLine("ClassName is: " + type.Name + "\n");
 
             Console.WriteLine("Methods used in Class Customer is as follows");
-            
+
             MethodInfo[] methods = type.GetMethods();
 
-            
+
             foreach (MethodInfo method in methods)
             {
                 Console.WriteLine("Method Name: " + method.Name + " " + "Method RetrunType: " + method.ReturnType.Name);
             }
 
-            
+
             Console.WriteLine("\nProperties of Class FindTheNumber");
 
             PropertyInfo[] properties = type.GetProperties();
 
-            
+
             foreach (PropertyInfo property in properties)
             {
                 Console.WriteLine(property.PropertyType.Name + ": " + property.Name);
             }
 
-            
+
             Console.WriteLine("\nConstructor Present in FindTheNumber class");
 
             ConstructorInfo[] constructors = type.GetConstructors();
